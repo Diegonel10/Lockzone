@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 15% 5%;
+    --foreground: 0 0% 95%;
+    
+    --card: 220 15% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 15% 7%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 145 63% 42%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 220 15% 20%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 145 50% 52%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 220 15% 25%;
+    --input: 220 15% 25%;
+    --ring: 145 63% 49%;
+    
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 220 15% 5%;
+    --foreground: 0 0% 95%;
+    
+    --card: 220 15% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 15% 7%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 145 63% 42%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 220 15% 20%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 145 50% 52%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 220 15% 25%;
+    --input: 220 15% 25%;
+    --ring: 145 63% 49%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.sports-pattern {
+  background-color: hsl(var(--background));
+  background-image:
+    radial-gradient(hsl(var(--primary) / 0.05) 1px, transparent 1px),
+    radial-gradient(hsl(var(--primary) / 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+.hero-gradient-sports {
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.8) 0%, hsl(var(--background) / 0.7) 70%, hsl(var(--background)) 100%);
+}
